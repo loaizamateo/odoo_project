@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <data noupdate="1">
+        <record id="05" model="gotagota.departamento">
+            <field name="codigo">05</field>
+            <field name="name">ANTIOQUIA</field>
+        </record>
+        <record id="17" model="gotagota.departamento">
+            <field name="codigo">17</field>
+            <field name="name">CALDAS</field>
+        </record>
+        <record id="63" model="gotagota.departamento">
+            <field name="codigo">63</field>
+            <field name="name">RISARALDA</field>
+        </record>
+
+
+
+        <record id="17001" model="gotagota.ciudad">
+            <field name="codigo">17001</field>
+            <field name="name">Manizales</field>
+            <field name="departamento_id" ref="17"/>
+        </record>
+
+
+    </data>
+
+</odoo>

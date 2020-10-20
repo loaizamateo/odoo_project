@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<odoo>
+    <!-- insert en un modelo-->
+   <record id="module_gotagota_category" model="ir.module.category">
+            <field name="name">Gota a Gota</field>
+            <field name="sequence">20</field>
+        </record>
+
+        <record id="gotagota_group_consult" model="res.groups">
+            <!-- nombre al grupo de usuarios -->
+            <field name="name">Consulta</field>
+            <field name="category_id" ref="module_gotagota_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+
+        <record id="gotagota_group_manager" model="res.groups">
+            <field name="name">Administrador</field>
+            <!-- heredando permisos del grupo anterior-->
+            <field name="implied_ids" eval="[(4, ref('gotagota_group_consult'))]"/>
+            <field name="category_id" ref="module_gotagota_category"/>
+            <!-- dando permisos de superadministrador en el sistema -->
+            <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+        </record>
+</odoo>
