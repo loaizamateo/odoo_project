@@ -13,13 +13,13 @@
     "auto_install": False,
     "depends": [],
     "data": [
-        'security/gotagota_security.xml',
+        'security/peoplescanner_security.xml',
         'security/ir.model.access.csv',
         'views/gotagota_prestamo_view.xml',
         'views/gotagota_parametricas_view.xml',
-        'views/gotagota_cobrador_view.xml',
+        'views/peoplescanner_usuario_view.xml',
         'data/gotagota_data_departamento.xml',
-        'views/gotagota_menu.xml',
+        'views/peoplescanner_menu.xml',
     ],
     "images": ["static/description/icon.png"],
 }
